@@ -155,3 +155,7 @@ input[type=button] {
   .hidden {
     display: none;
   }
+
+  #message {
+    color: black;
+  }
