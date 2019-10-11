@@ -8,10 +8,9 @@
   },
   "author": "Retardur",
   "license": "ISC",
-  "devDependencies": {
-    "electron": "^6.0.12"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "simple-ssh": "^1.0.0"
+    "simple-ssh": "^1.0.0",
+    "electron": "^6.0.12"
   }
 }
