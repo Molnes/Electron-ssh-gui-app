@@ -1,6 +1,6 @@
 {
   "name": "easy-shh",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "An electron based app to send ssh commands to a server via a GUI",
   "main": "main.js",
   "scripts": {
