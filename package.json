@@ -4,14 +4,22 @@
   "description": "An electron based app to send ssh commands to a server via a GUI",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Retardur/Electron-ssh-gui-app"
   },
   "author": "Retardur",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^6.0.12"
+    "electron": "^6.0.12",
+    "electron-builder": "^21.2.0"
   },
   "dependencies": {
+    "electron-updater": "^4.1.2",
     "simple-ssh": "^1.0.0"
   }
 }
