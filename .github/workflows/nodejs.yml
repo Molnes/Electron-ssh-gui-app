@@ -22,5 +22,6 @@ jobs:
       run: |
         npm install
         npm run deploy
+        electron-builder build --publish always
       env:
         CI: true
