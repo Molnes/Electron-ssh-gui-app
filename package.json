@@ -1,12 +1,12 @@
 {
   "name": "easy-shh",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "An electron based app to send ssh commands to a server via a GUI",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder build --win --publish never",
-    "deploy": "electron-builder build --publish always"
+    "deploy": "electron-builder build --win --publish always"
   },
   "repository": {
     "type": "git",
