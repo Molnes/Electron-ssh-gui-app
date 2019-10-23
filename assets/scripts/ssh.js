@@ -89,3 +89,34 @@ function sshuptime() {
         }
     }).start();
 }
+
+function sshCustom() {
+
+    var ssh = new SSH({
+        host: document.getElementById("ipadresse").value,
+        user: document.getElementById("brukernavn").value,
+        pass: document.getElementById("passord").value
+    });
+
+    var customCommand = get.getElementById("customCommand").value
+
+    ssh.exec(customCommand, {
+        out: function (stdout) {
+            document.getElementById('consoleoutput').innerHTML = "";
+            document.getElementById('consoleoutput').innerHTML = stdout;
+            console.log(stdout);
+        },
+
+        err: function (stderr) {
+            document.getElementById('consoleoutputerror').innerHTML = "";
+            document.getElementById('consoleoutputerror').innerHTML = stderr;
+            console.log(stderr);
+        },
+
+        exit: function (code) {
+            document.getElementById('consoleoutputexitcode').innerHTML = "";
+            document.getElementById('consoleoutputexitcode').innerHTML = 'Exitcode ' + code;
+            console.log(code);
+        }
+    }).start();
+}

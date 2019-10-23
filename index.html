@@ -35,22 +35,25 @@
   </header>
 
   <div id="main">
-    <h1>Hello</h1>
+    <h1>Welcome!</h1>
+    <p> To use the app, first write in your information then push the buttons to send the commands.</p>
 
     <form>
-      <label for="ipadresse">IP-adresse:</label>
-      <input type="text" id="ipadresse" value="ipadresse"><br>
+      <label for="ipadresse">IP-Adress:</label>
+      <input type="text" id="ipadresse" placeholder="IP-Adress" value=""><br>
 
-      <label for="brukernavn">Brukernavn:</label>
-      <input type="text" id="brukernavn" value="bruker"><br>
+      <label for="brukernavn">Username:</label>
+      <input type="text" id="brukernavn" placeholder="Username" value=""><br>
 
-      <label for="passord">Passord:</label>
-      <input type="password" id="passord" value="passord"><br>
+      <label for="passord">Password:</label>
+      <input type="password" id="passord" placeholder="Password" value=""><br>
     </form>
 
     <input type="button" onclick="sshls()" value="ssh-ls">
     <input type="button" onclick="sshuptime()" value="ssh-uptime">
     <input type="button" id="shutdown" onclick="sshshutdown()" value="ssh-shutdown">
+    <input type="text" id="customCommand" placeholder="Write your custom command here" value="">
+    <input type="button" onclick="sshCustom()" value="Custom Command">
     <p style="white-space: pre-line" id="consoleoutput"></p>
     <p id="consoleoutputerror"></p>
     <p id="consoleoutputexitcode"></p>
